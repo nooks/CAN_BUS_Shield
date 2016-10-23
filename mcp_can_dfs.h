@@ -60,7 +60,7 @@
 #endif
 
 // if print debug information
-#define DEBUG_MODE 0
+#define DEBUG_MODE 1
 
 /*
  *   Begin mt
@@ -268,6 +268,34 @@
 #define MCP_MERRF       0x80
 
 /*
+ *  speed 8M
+ */
+
+#define MCP_8MHz_1000kBPS_CFG1 (0x00)
+#define MCP_8MHz_1000kBPS_CFG2 (0x80)
+#define MCP_8MHz_1000kBPS_CFG3 (0x00)
+
+#define MCP_8MHz_500kBPS_CFG1 (0x00)
+#define MCP_8MHz_500kBPS_CFG2 (0x90)
+#define MCP_8MHz_500kBPS_CFG3 (0x02)
+
+#define MCP_8MHz_250kBPS_CFG1 (0x00)
+#define MCP_8MHz_250kBPS_CFG2 (0xb1)
+#define MCP_8MHz_250kBPS_CFG3 (0x05)
+
+#define MCP_8MHz_200kBPS_CFG1 (0x00)
+#define MCP_8MHz_200kBPS_CFG2 (0xb4)
+#define MCP_8MHz_200kBPS_CFG3 (0x06)
+
+#define MCP_8MHz_125kBPS_CFG1 (0x01)
+#define MCP_8MHz_125kBPS_CFG2 (0xb1)
+#define MCP_8MHz_125kBPS_CFG3 (0x05)
+
+#define MCP_8MHz_100kBPS_CFG1 (0x01)
+#define MCP_8MHz_100kBPS_CFG2 (0xb4)
+#define MCP_8MHz_100kBPS_CFG3 (0x06)
+
+/*
  *  speed 16M
  */
 #define MCP_16MHz_1000kBPS_CFG1 (0x00)
@@ -395,6 +423,13 @@
 #define CAN_500KBPS  16
 #define CAN_666KBPS  17
 #define CAN_1000KBPS 18
+
+#define CAN_100KBPS_8MHZ  19
+#define CAN_125KBPS_8MHZ  20
+#define CAN_200KBPS_8MHZ  21
+#define CAN_250KBPS_8MHZ  22
+#define CAN_500KBPS_8MHZ  23
+#define CAN_1000KBPS_8MHZ 24
 
 #define CAN_OK                  (0)
 #define CAN_FAILINIT            (1)

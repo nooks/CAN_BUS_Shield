@@ -73,7 +73,7 @@ void MCP_CAN::mcp2515_reset(void)
 ** Function name:           mcp2515_readRegister
 ** Descriptions:            read register
 *********************************************************************************************************/
-INT8U MCP_CAN::mcp2515_readRegister(const INT8U address)                                                                     
+INT8U MCP_CAN::mcp2515_readRegister(const INT8U address)
 {
     INT8U ret;
 
@@ -225,7 +225,7 @@ INT8U MCP_CAN::mcp2515_setCANCTRL_Mode(const INT8U newmode)
 ** Function name:           mcp2515_configRate
 ** Descriptions:            set boadrate
 *********************************************************************************************************/
-INT8U MCP_CAN::mcp2515_configRate(const INT8U canSpeed)            
+INT8U MCP_CAN::mcp2515_configRate(const INT8U canSpeed)
 {
     INT8U set, cfg1, cfg2, cfg3;
     set = 1;
@@ -248,13 +248,13 @@ INT8U MCP_CAN::mcp2515_configRate(const INT8U canSpeed)
         cfg2 = MCP_16MHz_20kBPS_CFG2;
         cfg3 = MCP_16MHz_20kBPS_CFG3;
         break;
-        
+
         case (CAN_25KBPS):
         cfg1 = MCP_16MHz_25kBPS_CFG1;
         cfg2 = MCP_16MHz_25kBPS_CFG2;
         cfg3 = MCP_16MHz_25kBPS_CFG3;
         break;
-        
+
         case (CAN_31K25BPS):
         cfg1 = MCP_16MHz_31k25BPS_CFG1;
         cfg2 = MCP_16MHz_31k25BPS_CFG2;
@@ -297,7 +297,7 @@ INT8U MCP_CAN::mcp2515_configRate(const INT8U canSpeed)
         cfg3 = MCP_16MHz_95kBPS_CFG3;
         break;
 
-        case (CAN_100KBPS):                                             /* 100KBPS                  */
+        case (CAN_100KBPS):
         cfg1 = MCP_16MHz_100kBPS_CFG1;
         cfg2 = MCP_16MHz_100kBPS_CFG2;
         cfg3 = MCP_16MHz_100kBPS_CFG3;
@@ -326,18 +326,54 @@ INT8U MCP_CAN::mcp2515_configRate(const INT8U canSpeed)
         cfg2 = MCP_16MHz_500kBPS_CFG2;
         cfg3 = MCP_16MHz_500kBPS_CFG3;
         break;
-        
-	case (CAN_666KBPS):
+
+        case (CAN_666KBPS):
         cfg1 = MCP_16MHz_666kBPS_CFG1;
         cfg2 = MCP_16MHz_666kBPS_CFG2;
         cfg3 = MCP_16MHz_666kBPS_CFG3;
         break;
-        
+
         case (CAN_1000KBPS):
         cfg1 = MCP_16MHz_1000kBPS_CFG1;
         cfg2 = MCP_16MHz_1000kBPS_CFG2;
         cfg3 = MCP_16MHz_1000kBPS_CFG3;
-        break;  
+        break;
+
+        case (CAN_100KBPS_8MHZ):
+        cfg1 = MCP_8MHz_100kBPS_CFG1;
+        cfg2 = MCP_8MHz_100kBPS_CFG2;
+        cfg3 = MCP_8MHz_100kBPS_CFG3;
+        break;
+
+        case (CAN_125KBPS_8MHZ):
+        cfg1 = MCP_8MHz_125kBPS_CFG1;
+        cfg2 = MCP_8MHz_125kBPS_CFG2;
+        cfg3 = MCP_8MHz_125kBPS_CFG3;
+        break;
+
+        case (CAN_200KBPS_8MHZ):
+        cfg1 = MCP_8MHz_200kBPS_CFG1;
+        cfg2 = MCP_8MHz_200kBPS_CFG2;
+        cfg3 = MCP_8MHz_200kBPS_CFG3;
+        break;
+
+        case (CAN_250KBPS_8MHZ):
+        cfg1 = MCP_8MHz_250kBPS_CFG1;
+        cfg2 = MCP_8MHz_250kBPS_CFG2;
+        cfg3 = MCP_8MHz_250kBPS_CFG3;
+        break;
+
+        case (CAN_500KBPS_8MHZ):
+        cfg1 = MCP_8MHz_500kBPS_CFG1;
+        cfg2 = MCP_8MHz_500kBPS_CFG2;
+        cfg3 = MCP_8MHz_500kBPS_CFG3;
+        break;
+
+        case (CAN_1000KBPS_8MHZ):
+        cfg1 = MCP_8MHz_1000kBPS_CFG1;
+        cfg2 = MCP_8MHz_1000kBPS_CFG2;
+        cfg3 = MCP_8MHz_1000kBPS_CFG3;
+        break;
 
         default:
         set = 0;
